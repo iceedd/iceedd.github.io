@@ -146,6 +146,9 @@ section {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
 }
 
 .project-card::before {
