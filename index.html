@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - HomLab</title>
+    <title>HomLab Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">HomLab</div>
+            <a href="#" class="logo">
+                <i class="fas fa-code"></i>
+                HomLab
+            </a>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -22,38 +27,82 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Welcome to My Portfolio</h1>
-                <p>Showcasing my projects and work</p>
+                <h1>Welcome to HomLab</h1>
+                <p>Transforming Ideas into Digital Reality</p>
+                <a href="#projects" class="btn">View My Work</a>
             </div>
         </section>
 
         <section id="projects" class="projects">
-            <h2>My Projects</h2>
+            <h2>Featured Projects</h2>
             <div class="project-grid">
-                <!-- Project cards will go here -->
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='projects/project1.html'">
+                    <img src="https://via.placeholder.com/400x200" alt="Project 1">
                     <h3>Project 1</h3>
-                    <p>Description of project 1</p>
+                    <p>A brief description of project 1 and the technologies used.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='projects/project2.html'">
+                    <img src="https://via.placeholder.com/400x200" alt="Project 2">
                     <h3>Project 2</h3>
-                    <p>Description of project 2</p>
+                    <p>A brief description of project 2 and its key features.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="project-card" onclick="window.location.href='projects/project3.html'">
+                    <img src="https://via.placeholder.com/400x200" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>An overview of project 3 and its impact.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="about" class="about">
             <h2>About Me</h2>
-            <p>Add your personal description and skills here.</p>
+            <div class="about-content">
+                <p>I am a passionate developer focused on creating innovative solutions to complex problems. With expertise in various technologies, I strive to deliver high-quality, user-centric applications.</p>
+                
+                <h3>Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">HTML5 & CSS3</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">React</div>
+                    <div class="skill-item">Node.js</div>
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">Git</div>
+                </div>
+            </div>
         </section>
 
         <section id="contact" class="contact">
-            <h2>Contact Me</h2>
-            <p>Email: your.email@example.com</p>
+            <h2>Get in Touch</h2>
+            <form class="contact-form" action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
         </section>
     </main>
 
     <footer>
+        <div class="social-links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
         <p>&copy; 2024 HomLab. All rights reserved.</p>
     </footer>
 </body>
