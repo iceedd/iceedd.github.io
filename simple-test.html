@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { color: #3b82f6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Portfolio Test Page</h1>
+        <p>This is a simple HTML page to test if the domain is working correctly.</p>
+        <p><strong>Current URL:</strong> <span id="url"></span></p>
+        <p><strong>User Agent:</strong> <span id="ua"></span></p>
+        <h2>Asset Tests:</h2>
+        <p>JavaScript file exists: <span id="js-test">Testing...</span></p>
+        <p>CSS file exists: <span id="css-test">Testing...</span></p>
+    </div>
+    <script>
+        document.getElementById('url').textContent = window.location.href;
+        document.getElementById('ua').textContent = navigator.userAgent;
+        
+        // Test if JS file exists
+        fetch('/assets/index-a1184f31.js')
+            .then(response => {
+                document.getElementById('js-test').textContent = `${response.status} - ${response.statusText}`;
+                document.getElementById('js-test').style.color = response.ok ? 'green' : 'red';
+            })
+            .catch(error => {
+                document.getElementById('js-test').textContent = `Error: ${error.message}`;
+                document.getElementById('js-test').style.color = 'red';
+            });
+            
+        // Test if CSS file exists
+        fetch('/assets/index-ad2472ac.css')
+            .then(response => {
+                document.getElementById('css-test').textContent = `${response.status} - ${response.statusText}`;
+                document.getElementById('css-test').style.color = response.ok ? 'green' : 'red';
+            })
+            .catch(error => {
+                document.getElementById('css-test').textContent = `Error: ${error.message}`;
+                document.getElementById('css-test').style.color = 'red';
+            });
+    </script>
+</body>
+</html>
